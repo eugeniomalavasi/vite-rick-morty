@@ -12,7 +12,6 @@ export default {
         .then((resp) => {
             this.dataArray = resp.data.results;   
             console.log(resp);
-            console.log(this.dataArray);
         })
     }, data() {
         return {
@@ -23,9 +22,10 @@ export default {
 </script>
 
 <template>
+
     <AppHeader />
     
-    <CardsContainer />
+    <CardsContainer :dataArray = "dataArray" />
 
 </template>
 

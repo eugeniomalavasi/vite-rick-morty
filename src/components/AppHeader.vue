@@ -1,13 +1,14 @@
 <script>
 export default {
-    
+
 }
 </script>
 
 <template>
-    <div>
-        test header
-    </div>
+<h1>Rick and Morty: The App</h1>
+
+
+
 </template>
 
 <style lang="scss" scoped>
