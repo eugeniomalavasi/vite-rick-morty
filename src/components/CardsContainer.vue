@@ -13,9 +13,9 @@ export default {
 
 <template>
 <div class="container">
-    <div class="row row-cols-4">
-      <div class="col" v-for="character in dataArray">
-        <AppCard :characterObj = "character" />
+    <div class="row" >
+      <div v-for="character in dataArray" class="col-sm-10 col-md-4 col-lg-2 d-flex justify-content-center">
+        <AppCard :characterObj = "character"/>
       </div>
     </div>
   </div>

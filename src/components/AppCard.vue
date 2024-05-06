@@ -13,10 +13,10 @@
 </script>
 
 <template>
-    <div>
+    <div class="d-flex flex-column justify-content-center text-center">
         <img :src="characterObj.image" alt="">
-        <p>{{ characterObj.name }}</p>
-        <p>{{ characterObj.status }}</p>
+        <p class="mt-4 fw-bolder">{{ characterObj.name }}</p>
+        <p class="mb-2">{{ characterObj.status }}</p>
         <p>{{ characterObj.species
         }}</p>
     </div>
