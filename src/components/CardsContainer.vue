@@ -5,11 +5,10 @@ export default {
 </script>
 
 <template>
-    <div>
-        test card container
+    <div class="">
+        
     </div>
 </template>
 
 <style lang="scss" scoped>
-    
 </style>
