@@ -7,7 +7,7 @@ Come dovete procedere:
 3. Inserire il componente AppSearch nel App.vue
 4. Create evento al cambiamento del valore del select in AppSearch. In App.vue inserite ascolto dell'evento e eseguite console.log per verificare se l'evento funzioni.
 5. Collegare tramite v-model il select al selectedStatus dello store (nel componente AppSearch)
-6. Nell App.vue importare lo store e in base al valore del selectedStatus fare la chiamata api. Nel then aggiornare i la lista di personaggi.
+6. Nell App.vue importare lo store e in base al valore del selectedStatus fare la chiamata api. Nel then aggiornare la lista di personaggi.
 Bonus:
 1. Fare refactorin dell'app, inserendo la lista dei personaggi nello store globale
 2. Creare un componente che mostri il numero totale di risultati ottenuti.

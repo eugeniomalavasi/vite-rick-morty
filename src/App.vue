@@ -2,8 +2,8 @@
     import AppHeader from './components/AppHeader.vue';
     import CardsContainer from './components/CardsContainer.vue';
     import AppSearch from './components/AppSearch.vue';
-    import {store} from './store.js';
-    
+    import { store } from './store.js';
+
     import axios from 'axios';
     export default {
         components: {
@@ -22,12 +22,27 @@
         }, data() {
             return {
                 importArray: [],
-                isLoading: 'false',
+                isLoading: 'true',
                 store,
             }
         }, methods: {
             changeStatus() {
                 console.log('status:', this.store.selectedStatus);
+
+                const paramsObj = {
+                    status: this.store.selectedStatus,
+                };
+
+                axios
+                    .get("https://rickandmortyapi.com/api/character", {
+                        params: paramsObj,
+                    })
+
+                    .then((response) => {
+                        this.importArray = response.data.results;
+                        console.log(response);
+                    })
+
             }
         },
     }
@@ -37,10 +52,10 @@
 
     <AppHeader />
 
-    <AppSearch @filter="changeStatus"/>
-    
-    <CardsContainer :dataArray="importArray" v-if="isLoading === 'false'" />
-    <div v-else="isLoading"> caricamento </div>
+    <AppSearch @filter="changeStatus" />
+
+    <CardsContainer :dataArray="importArray" v-if="isLoading" />
+    <div v-else> caricamento </div>
 
 
 </template>
