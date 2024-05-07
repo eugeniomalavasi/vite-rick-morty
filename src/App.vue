@@ -32,7 +32,13 @@
                 const paramsObj = {
                     status: this.store.selectedStatus,
                 };
-
+                if(this.store.selectedStatus === "all") {
+                    axios
+                .get("https://rickandmortyapi.com/api/character")
+                .then((resp) => {
+                    this.store.importArray = resp.data.results;
+                })
+                }
                 axios
                     .get("https://rickandmortyapi.com/api/character", {
                         params: paramsObj,

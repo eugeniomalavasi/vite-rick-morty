@@ -5,7 +5,7 @@
     export default {
         data() {
             return {
-                status: ["Alive", "dead", "unknown"],
+                status: ["all","alive", "dead", "unknown"],
                 store
             }
         }, components: {
