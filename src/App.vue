@@ -15,7 +15,7 @@
             axios
                 .get("https://rickandmortyapi.com/api/character")
                 .then((resp) => {
-                    this.importArray = resp.data.results;
+                    this.store.importArray = resp.data.results;
                     this.isLoading = 'false';
                     console.log(resp);
                 })
@@ -39,7 +39,7 @@
                     })
 
                     .then((response) => {
-                        this.importArray = response.data.results;
+                        this.store.importArray = response.data.results;
                         console.log(response);
                     })
 
@@ -54,7 +54,7 @@
 
     <AppSearch @filter="changeStatus" />
 
-    <CardsContainer :dataArray="importArray" v-if="isLoading" />
+    <CardsContainer v-if="isLoading" />
     <div v-else> caricamento </div>
 
 
