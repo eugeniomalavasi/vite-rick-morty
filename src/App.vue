@@ -9,7 +9,7 @@
         components: {
             AppHeader,
             CardsContainer,
-            AppSearch
+            AppSearch,
         }, created() {
             this.isLoading = 'true';
             axios
@@ -52,6 +52,7 @@
 
     <AppHeader />
 
+    <SearchTotal />
     <AppSearch @filter="changeStatus" />
 
     <CardsContainer v-if="isLoading" />
