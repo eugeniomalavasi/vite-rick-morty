@@ -15,10 +15,10 @@
 <template>
     <div class="d-flex flex-column justify-content-center text-center">
         <img :src="characterObj.image" alt="">
-        <p class="mt-4 fw-bolder">{{ characterObj.name }}</p>
+        <p class="mt-4 fw-bolder names">{{ characterObj.name }}</p>
         <p class="mb-2">{{ characterObj.status }}</p>
         <p>{{ characterObj.species
-        }}</p>
+            }}</p>
     </div>
 </template>
 
@@ -29,5 +29,11 @@
         width: 150px;
         border-radius: 50%;
         box-shadow: 5px 5px 5px black;
+    }
+
+    .names {
+        font-family: "Jaro", sans-serif;
+        font-optical-sizing: auto;
+        color: green;
     }
 </style>
